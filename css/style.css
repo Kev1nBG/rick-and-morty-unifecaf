@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e252b;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* HEADER & NAVBAR */
+.header {
+  background-color: #0f171e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  border-bottom: 3px solid #00b5cc;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-titulo {
+  font-size: 1.8rem;
+  color: #a6eee6;
+}
+
+.logo-titulo span {
+  color: #00b5cc;
+  font-style: italic;
+}
+
+/* BOTÃO DE MÚSICA NO HEADER */
+.audio-player {
+  display: flex;
+  align-items: center;
+}
+
+#btn-musica {
+  background-color: #2a343d;
+  color: #00b5cc;
+  border: 1px solid #00b5cc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+#btn-musica:hover {
+  background-color: #00b5cc;
+  color: #0f171e;
+}
+
+#btn-musica.tocando {
+  background-color: #00b5cc;
+  color: #0f171e;
+  box-shadow: 0 0 12px #00b5cc;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: #00b5cc;
+}
+
+/* HERO BANNER */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #0f171e 0%, #1e252b 100%);
+  border-bottom: 1px solid #334155;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  color: #00b5cc;
+}
+
+/* SEÇÕES */
+.secao {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.titulo-secao {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #a6eee6;
+  border-bottom: 2px solid #00b5cc;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* EPISÓDIOS */
+.grid-episodios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-episodio {
+  background-color: #2a343d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #00b5cc;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.card-episodio:hover {
+  transform: translateY(-5px);
+}
+
+.btn-favorito-ep {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(15, 23, 30, 0.6);
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.btn-favorito-ep:hover {
+  transform: scale(1.2);
+}
+
+.badge-ep {
+  background-color: #00b5cc;
+  color: #0f171e;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.card-episodio h3 {
+  margin: 0.8rem 0 0.5rem 0;
+  color: #ffffff;
+}
+
+/* CARDS DOS PERSONAGENS (JS) */
+.grid-personagens {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card-personagem {
+  background-color: #2a343d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-personagem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 181, 204, 0.3);
+}
+
+.container-img-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-personagem {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.container-img-card:hover .img-personagem {
+  transform: scale(1.05);
+}
+
+.btn-favorito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(15, 23, 30, 0.7);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 8px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.btn-favorito:hover {
+  transform: scale(1.2);
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+}
+
+.info-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-vivo { background-color: #55cc44; }
+.status-morto { background-color: #d63d2e; }
+.status-desconhecido { background-color: #9e9e9e; }
+
+/* MODAL DE ZOOM */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-conteudo {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  border: 3px solid #00b5cc;
+  box-shadow: 0 0 20px rgba(0, 181, 204, 0.6);
+}
+
+#caption-modal {
+  margin-top: 15px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.fechar-modal:hover {
+  color: #00b5cc;
+}
+
+.mensagem-vazio {
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  color: #94a3b8;
+  padding: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0f171e;
+  border-top: 1px solid #334155;
+  color: #94a3b8;
+}

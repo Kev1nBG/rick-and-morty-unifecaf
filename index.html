@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rick e Morty</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO / NAVBAR -->
+  <header class="header">
+    <div class="logo-container">
+      <h1 class="logo-titulo">Rick <span>e</span> Morty</h1>
+    </div>
+
+    <!-- PLAYER DE ÁUDIO COM O NOME EXATO DO SEU ARQUIVO MP3 -->
+    <div class="audio-player">
+      <button id="btn-musica" title="Tocar ou Pausar Música">🎵 Tocar Abertura</button>
+      <audio id="musica-abertura" src="assets/music/Rick And Morty Intro - ClamJammah.mp3" preload="auto" loop></audio>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#episodios" id="btn-menu-episodios">Episódios</a></li>
+        <li><a href="#personagens" id="btn-mostrar-todos">Personagens</a></li>
+        <li><a href="#personagens" id="btn-mostrar-favoritos">Favoritos ❤️</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section class="hero">
+    <h2>Explore a Galáxia e Seus Personagens</h2>
+  </section>
+
+  <!-- SEÇÃO DE EPISÓDIOS -->
+  <section id="episodios" class="secao">
+    <h2 class="titulo-secao">Episódios</h2>
+    <div class="grid-episodios">
+      <article class="card-episodio">
+        <button class="btn-favorito-ep" title="Favoritar">🤍</button>
+        <span class="badge-ep">T01E01</span>
+        <h3>Piloto</h3>
+        <p><strong>Exibição:</strong> 02/12/2013</p>
+        <p>Rick se muda para a casa da família de sua filha Beth e começa a exercer uma péssima influência sobre seu neto Morty.</p>
+      </article>
+
+      <article class="card-episodio">
+        <button class="btn-favorito-ep" title="Favoritar">🤍</button>
+        <span class="badge-ep">T01E02</span>
+        <h3>O Cão do Gramado</h3>
+        <p><strong>Exibição:</strong> 09/12/2013</p>
+        <p>Rick cria um dispositivo para aumentar a inteligência do cachorro da família, Snuffles, o que gera consequências inesperadas.</p>
+      </article>
+
+      <article class="card-episodio">
+        <button class="btn-favorito-ep" title="Favoritar">🤍</button>
+        <span class="badge-ep">T01E03</span>
+        <h3>Parque dos Anatomistas</h3>
+        <p><strong>Exibição:</strong> 16/12/2013</p>
+        <p>Morty é encolhido e enviado para dentro do corpo de um homem para salvar um parque de atrações microscópico.</p>
+      </article>
+
+      <article class="card-episodio">
+        <button class="btn-favorito-ep" title="Favoritar">🤍</button>
+        <span class="badge-ep">T01E04</span>
+        <h3>Alienígenas e Simulações</h3>
+        <p><strong>Exibição:</strong> 13/01/2014</p>
+        <p>Alienígenas tentam roubar a fórmula do combustível de matéria escura do Rick prendendo-o em uma simulação virtual.</p>
+      </article>
+
+      <article class="card-episodio">
+        <button class="btn-favorito-ep" title="Favoritar">🤍</button>
+        <span class="badge-ep">T01E05</span>
+        <h3>Meeseeks e Destruição</h3>
+        <p><strong>Exibição:</strong> 20/01/2014</p>
+        <p>Rick fornece à família uma caixa que cria seres chamados Meeseeks para resolverem seus problemas do dia a dia.</p>
+      </article>
+
+      <article class="card-episodio">
+        <button class="btn-favorito-ep" title="Favoritar">🤍</button>
+        <span class="badge-ep">T01E06</span>
+        <h3>Poção do Amor nº 9</h3>
+        <p><strong>Exibição:</strong> 27/01/2014</p>
+        <p>Uma poção do amor criada por Rick infecta toda a Terra com um vírus mutante, forçando medidas extremas.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE PERSONAGENS -->
+  <section id="personagens" class="secao">
+    <h2 class="titulo-secao" id="titulo-personagens">Personagens</h2>
+    <div id="personagens-container" class="grid-personagens"></div>
+  </section>
+
+  <!-- MODAL PARA ZOOM NA FOTO -->
+  <div id="modal-zoom" class="modal">
+    <span class="fechar-modal">&times;</span>
+    <img class="modal-conteudo" id="img-modal" alt="Foto expandida">
+    <div id="caption-modal"></div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <p>&copy; Página de Fãs de Rick e Morty</p>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
